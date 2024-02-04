@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.NavPanel = new System.Windows.Forms.Panel();
+            this.dataIcon = new System.Windows.Forms.PictureBox();
             this.CadastroCarroIcon = new System.Windows.Forms.PictureBox();
             this.ConfigIcon = new System.Windows.Forms.PictureBox();
             this.InfoIcon = new System.Windows.Forms.PictureBox();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.vagasPanel = new System.Windows.Forms.Panel();
             this.NavPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CadastroCarroIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoIcon)).BeginInit();
@@ -44,6 +46,7 @@
             // NavPanel
             // 
             this.NavPanel.BackColor = System.Drawing.Color.Gray;
+            this.NavPanel.Controls.Add(this.dataIcon);
             this.NavPanel.Controls.Add(this.CadastroCarroIcon);
             this.NavPanel.Controls.Add(this.ConfigIcon);
             this.NavPanel.Controls.Add(this.InfoIcon);
@@ -52,6 +55,17 @@
             this.NavPanel.Name = "NavPanel";
             this.NavPanel.Size = new System.Drawing.Size(150, 1041);
             this.NavPanel.TabIndex = 0;
+            // 
+            // dataIcon
+            // 
+            this.dataIcon.Image = ((System.Drawing.Image)(resources.GetObject("dataIcon.Image")));
+            this.dataIcon.Location = new System.Drawing.Point(0, 110);
+            this.dataIcon.Name = "dataIcon";
+            this.dataIcon.Size = new System.Drawing.Size(150, 104);
+            this.dataIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dataIcon.TabIndex = 3;
+            this.dataIcon.TabStop = false;
+            this.dataIcon.Click += new System.EventHandler(this.dataIcon_Click);
             // 
             // CadastroCarroIcon
             // 
@@ -115,6 +129,7 @@
             this.Name = "Main";
             this.Text = "Form1";
             this.NavPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CadastroCarroIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoIcon)).EndInit();
@@ -130,6 +145,7 @@
         private System.Windows.Forms.PictureBox ConfigIcon;
         private System.Windows.Forms.PictureBox CadastroCarroIcon;
         private System.Windows.Forms.Panel vagasPanel;
+        private System.Windows.Forms.PictureBox dataIcon;
     }
 }
 

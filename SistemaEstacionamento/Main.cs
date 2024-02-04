@@ -104,5 +104,10 @@ namespace SistemaEstacionamento
             form.BringToFront();
             form.Show();
         }
+
+        private void dataIcon_Click(object sender, EventArgs e)
+        {
+            ShowFormInMainPanel(typeof(Data));
+        }
     }
 }

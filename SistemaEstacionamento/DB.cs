@@ -17,7 +17,7 @@ namespace SistemaEstacionamento
         public class Transacao
         {
             public int Id { get; set; }
-            [MaxLength(7)]
+            [MaxLength(8)]
             public string Placa { get; set; }
             public string Fabricante { get; set; }
             public int NumVaga { get; set; }
@@ -29,5 +29,11 @@ namespace SistemaEstacionamento
         }
 
         public DbSet<Transacao> Transacoes { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<DB>());
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
