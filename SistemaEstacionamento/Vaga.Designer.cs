@@ -41,7 +41,7 @@
             this.labelVaga.AutoSize = true;
             this.labelVaga.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVaga.ForeColor = System.Drawing.Color.DarkCyan;
-            this.labelVaga.Location = new System.Drawing.Point(55, 19);
+            this.labelVaga.Location = new System.Drawing.Point(55, 9);
             this.labelVaga.Name = "labelVaga";
             this.labelVaga.Size = new System.Drawing.Size(70, 18);
             this.labelVaga.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 91);
+            this.label1.Location = new System.Drawing.Point(22, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 1;
@@ -61,16 +61,16 @@
             // 
             // txtPlaca
             // 
-            this.txtPlaca.Location = new System.Drawing.Point(67, 87);
+            this.txtPlaca.Location = new System.Drawing.Point(26, 74);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(99, 20);
+            this.txtPlaca.Size = new System.Drawing.Size(126, 20);
             this.txtPlaca.TabIndex = 2;
             // 
             // txtEntrada
             // 
-            this.txtEntrada.Location = new System.Drawing.Point(67, 121);
+            this.txtEntrada.Location = new System.Drawing.Point(26, 126);
             this.txtEntrada.Name = "txtEntrada";
-            this.txtEntrada.Size = new System.Drawing.Size(99, 20);
+            this.txtEntrada.Size = new System.Drawing.Size(126, 20);
             this.txtEntrada.TabIndex = 4;
             // 
             // label2
@@ -78,7 +78,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 125);
+            this.label2.Location = new System.Drawing.Point(22, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 3;
@@ -89,7 +89,7 @@
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.White;
-            this.labelStatus.Location = new System.Drawing.Point(64, 166);
+            this.labelStatus.Location = new System.Drawing.Point(66, 168);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(50, 16);
             this.labelStatus.TabIndex = 5;
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(177, 208);
+            this.ClientSize = new System.Drawing.Size(175, 208);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.txtEntrada);
             this.Controls.Add(this.label2);

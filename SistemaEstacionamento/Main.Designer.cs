@@ -106,16 +106,17 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainPanel.Location = new System.Drawing.Point(150, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(877, 1041);
+            this.MainPanel.Size = new System.Drawing.Size(848, 1041);
             this.MainPanel.TabIndex = 1;
             // 
             // vagasPanel
             // 
+            this.vagasPanel.AutoSize = true;
             this.vagasPanel.BackColor = System.Drawing.Color.Black;
             this.vagasPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vagasPanel.Location = new System.Drawing.Point(1027, 0);
+            this.vagasPanel.Location = new System.Drawing.Point(998, 0);
             this.vagasPanel.Name = "vagasPanel";
-            this.vagasPanel.Size = new System.Drawing.Size(877, 1041);
+            this.vagasPanel.Size = new System.Drawing.Size(906, 1041);
             this.vagasPanel.TabIndex = 2;
             // 
             // Main
@@ -134,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfigIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoIcon)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

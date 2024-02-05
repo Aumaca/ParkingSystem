@@ -23,26 +23,26 @@ namespace SistemaEstacionamento
         public void SetPanelsToTableLayout()
         {
             int NumVagas = int.Parse(SharedData.NumeroVagas);
-            int gridSize = 0;
+            int numberOfRows = 0;
 
             for (int i = 1; i < NumVagas; i++)
             {
-                if (i * i >= NumVagas)
+                if (5 * i >= NumVagas)
                 {
-                    gridSize = i;
+                    numberOfRows = i;
                     break;
                 }
             }
 
-            TablePanel.RowCount = gridSize;
-            TablePanel.ColumnCount = gridSize;
+            TablePanel.RowCount = numberOfRows;
+            TablePanel.ColumnCount = 5;
             TablePanel.RowStyles.Clear();
             TablePanel.ColumnStyles.Clear();
 
             int counter = 1;
-            for (int i = 0; i < gridSize; i++)
+            for (int i = 0; i < numberOfRows; i++)
             {
-                for (int j = 0; j < gridSize; j++)
+                for (int j = 0; j < 5; j++)
                 {
                     if (counter <= NumVagas)
                     {
