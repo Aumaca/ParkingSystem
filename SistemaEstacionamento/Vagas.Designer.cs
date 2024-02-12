@@ -33,15 +33,16 @@
             // 
             // TablePanel
             // 
+            this.TablePanel.AutoScroll = true;
             this.TablePanel.BackColor = System.Drawing.Color.Black;
             this.TablePanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.TablePanel.ColumnCount = 1;
-            this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.TablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 859F));
             this.TablePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TablePanel.Location = new System.Drawing.Point(0, 0);
             this.TablePanel.Name = "TablePanel";
             this.TablePanel.RowCount = 1;
-            this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.TablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1000F));
             this.TablePanel.Size = new System.Drawing.Size(861, 1002);
             this.TablePanel.TabIndex = 1;
             // 

@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CadastroCarroBtn = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.FinalizarBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.InputPlaca = new System.Windows.Forms.TextBox();
             this.labelVaga = new System.Windows.Forms.Label();
@@ -47,19 +48,22 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTempo = new System.Windows.Forms.TextBox();
             this.listFabricante = new System.Windows.Forms.ComboBox();
+            this.CalcularBtn = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelFinal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CadastroCarroBtn
+            // FinalizarBtn
             // 
-            this.CadastroCarroBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CadastroCarroBtn.Location = new System.Drawing.Point(354, 829);
-            this.CadastroCarroBtn.Name = "CadastroCarroBtn";
-            this.CadastroCarroBtn.Size = new System.Drawing.Size(143, 40);
-            this.CadastroCarroBtn.TabIndex = 7;
-            this.CadastroCarroBtn.Text = "ALTERAR";
-            this.CadastroCarroBtn.UseVisualStyleBackColor = true;
-            this.CadastroCarroBtn.Click += new System.EventHandler(this.CadastroCarroBtn_Click);
+            this.FinalizarBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalizarBtn.Location = new System.Drawing.Point(355, 726);
+            this.FinalizarBtn.Name = "FinalizarBtn";
+            this.FinalizarBtn.Size = new System.Drawing.Size(143, 40);
+            this.FinalizarBtn.TabIndex = 7;
+            this.FinalizarBtn.Text = "FINALIZAR";
+            this.FinalizarBtn.UseVisualStyleBackColor = true;
+            this.FinalizarBtn.Click += new System.EventHandler(this.FinalizarBtn_Click);
             // 
             // label2
             // 
@@ -76,7 +80,7 @@
             this.InputPlaca.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputPlaca.Location = new System.Drawing.Point(323, 155);
             this.InputPlaca.Name = "InputPlaca";
-            this.InputPlaca.Size = new System.Drawing.Size(309, 37);
+            this.InputPlaca.Size = new System.Drawing.Size(335, 37);
             this.InputPlaca.TabIndex = 5;
             // 
             // labelVaga
@@ -114,7 +118,7 @@
             this.inputEntrada.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputEntrada.Location = new System.Drawing.Point(323, 274);
             this.inputEntrada.Name = "inputEntrada";
-            this.inputEntrada.Size = new System.Drawing.Size(309, 37);
+            this.inputEntrada.Size = new System.Drawing.Size(335, 37);
             this.inputEntrada.TabIndex = 10;
             // 
             // label5
@@ -132,13 +136,13 @@
             this.inputSaida.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputSaida.Location = new System.Drawing.Point(323, 335);
             this.inputSaida.Name = "inputSaida";
-            this.inputSaida.Size = new System.Drawing.Size(309, 37);
+            this.inputSaida.Size = new System.Drawing.Size(335, 37);
             this.inputSaida.TabIndex = 12;
             // 
             // BtnSaida
             // 
             this.BtnSaida.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSaida.Location = new System.Drawing.Point(656, 335);
+            this.BtnSaida.Location = new System.Drawing.Point(673, 332);
             this.BtnSaida.Name = "BtnSaida";
             this.BtnSaida.Size = new System.Drawing.Size(101, 43);
             this.BtnSaida.TabIndex = 14;
@@ -149,7 +153,7 @@
             // BtnEntrada
             // 
             this.BtnEntrada.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEntrada.Location = new System.Drawing.Point(656, 274);
+            this.BtnEntrada.Location = new System.Drawing.Point(673, 274);
             this.BtnEntrada.Name = "BtnEntrada";
             this.BtnEntrada.Size = new System.Drawing.Size(101, 43);
             this.BtnEntrada.TabIndex = 15;
@@ -166,16 +170,16 @@
             this.panelFinal.Controls.Add(this.label6);
             this.panelFinal.Controls.Add(this.label9);
             this.panelFinal.Controls.Add(this.txtTempo);
-            this.panelFinal.Location = new System.Drawing.Point(152, 431);
+            this.panelFinal.Location = new System.Drawing.Point(152, 459);
             this.panelFinal.Name = "panelFinal";
-            this.panelFinal.Size = new System.Drawing.Size(539, 336);
+            this.panelFinal.Size = new System.Drawing.Size(539, 206);
             this.panelFinal.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(122, 84);
+            this.label8.Location = new System.Drawing.Point(106, 109);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 35);
             this.label8.TabIndex = 20;
@@ -191,7 +195,7 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(264, 81);
+            this.txtValor.Location = new System.Drawing.Point(248, 106);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(168, 43);
             this.txtValor.TabIndex = 19;
@@ -207,7 +211,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(120, 28);
+            this.label9.Location = new System.Drawing.Point(104, 53);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(138, 35);
             this.label9.TabIndex = 18;
@@ -216,7 +220,7 @@
             // txtTempo
             // 
             this.txtTempo.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTempo.Location = new System.Drawing.Point(264, 20);
+            this.txtTempo.Location = new System.Drawing.Point(248, 45);
             this.txtTempo.Name = "txtTempo";
             this.txtTempo.Size = new System.Drawing.Size(168, 43);
             this.txtTempo.TabIndex = 17;
@@ -227,8 +231,23 @@
             this.listFabricante.FormattingEnabled = true;
             this.listFabricante.Location = new System.Drawing.Point(323, 222);
             this.listFabricante.Name = "listFabricante";
-            this.listFabricante.Size = new System.Drawing.Size(309, 31);
+            this.listFabricante.Size = new System.Drawing.Size(335, 31);
             this.listFabricante.TabIndex = 17;
+            // 
+            // CalcularBtn
+            // 
+            this.CalcularBtn.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalcularBtn.Location = new System.Drawing.Point(381, 391);
+            this.CalcularBtn.Name = "CalcularBtn";
+            this.CalcularBtn.Size = new System.Drawing.Size(222, 43);
+            this.CalcularBtn.TabIndex = 18;
+            this.CalcularBtn.Text = "CALCULAR";
+            this.CalcularBtn.UseVisualStyleBackColor = true;
+            this.CalcularBtn.Click += new System.EventHandler(this.CalcularBtn_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // CadastroCarro
             // 
@@ -236,6 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(869, 1002);
+            this.Controls.Add(this.CalcularBtn);
             this.Controls.Add(this.listFabricante);
             this.Controls.Add(this.panelFinal);
             this.Controls.Add(this.BtnEntrada);
@@ -245,7 +265,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.inputEntrada);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.CadastroCarroBtn);
+            this.Controls.Add(this.FinalizarBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.InputPlaca);
             this.Controls.Add(this.labelVaga);
@@ -253,6 +273,7 @@
             this.Text = "CadastroCarro";
             this.panelFinal.ResumeLayout(false);
             this.panelFinal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +281,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button CadastroCarroBtn;
+        private System.Windows.Forms.Button FinalizarBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox InputPlaca;
         private System.Windows.Forms.Label labelVaga;
@@ -279,5 +300,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTempo;
         private System.Windows.Forms.ComboBox listFabricante;
+        private System.Windows.Forms.Button CalcularBtn;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

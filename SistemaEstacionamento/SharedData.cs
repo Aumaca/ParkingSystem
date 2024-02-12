@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,8 +12,20 @@ namespace SistemaEstacionamento
 {
     public static class SharedData
     {
-        private static int activeVaga = 1;
-        public static int ActiveVaga
+        private static DB.Transacao GetFirstVaga()
+        {
+            using (var context = new DB())
+            {
+                return (from item in context.Transacoes
+                            orderby item.DataEntrada descending
+                            where item.NumVaga == 1
+                            select item).FirstOrDefault();
+            }
+        }
+
+        private static DB.Transacao activeVaga = GetFirstVaga();
+
+        public static DB.Transacao ActiveVaga
         {
             get { return activeVaga; }
             set { activeVaga = value; }

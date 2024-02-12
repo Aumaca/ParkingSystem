@@ -23,7 +23,7 @@ namespace SistemaEstacionamento
             ShowFormInVagasPanel();
         }
 
-        public void UpdateVaga(int numVaga)
+        public void UpdateVaga()
         {
             ShowFormInVagasPanel();
         }
@@ -77,8 +77,7 @@ namespace SistemaEstacionamento
 
         private void CadastroCarroIcon_Click(object sender, EventArgs e)
         {
-            int activeVaga = SharedData.ActiveVaga;
-            CadastroCarro form = new CadastroCarro(activeVaga, UpdateVaga)
+            CadastroCarro form = new CadastroCarro(UpdateVaga)
             {
                 TopLevel = false,
                 FormBorderStyle = FormBorderStyle.None,
@@ -92,8 +91,7 @@ namespace SistemaEstacionamento
 
         private void ShowCadastro()
         {
-            int activeVaga = SharedData.ActiveVaga;
-            CadastroCarro form = new CadastroCarro(activeVaga, UpdateVaga)
+            CadastroCarro form = new CadastroCarro(UpdateVaga)
             {
                 TopLevel = false,
                 FormBorderStyle = FormBorderStyle.None,

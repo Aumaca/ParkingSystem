@@ -7,27 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static SistemaEstacionamento.DB;
 
 namespace SistemaEstacionamento
 {
     public partial class Vaga : Form
     {
-        private string NumeroVaga;
-        private Action ShowCadastro;
+        private readonly Action ShowCadastro;
+        readonly DB.Transacao VagaInfo;
+        readonly int NumeroVaga;
         public Vaga(string numeroVaga, Action showCadastro)
         {
             InitializeComponent();
-            DB.Transacao VagaInfo;
             ShowCadastro = showCadastro;
-            int IntNumeroVaga = int.Parse(numeroVaga);
+            NumeroVaga = int.Parse(numeroVaga);
             using (var context = new DB())
             {
-                VagaInfo = (from item in context.Transacoes
-                            orderby item.DataEntrada descending
-                            where item.NumVaga == IntNumeroVaga
-                            select item).FirstOrDefault();
+                VagaInfo = (
+                    from item in context.Transacoes
+                    orderby item.DataEntrada descending
+                    where item.NumVaga == NumeroVaga && item.Valor == null
+                    select item
+                ).FirstOrDefault();
             }
-            NumeroVaga = numeroVaga;
             labelVaga.Text = "Vaga " + numeroVaga;
             if (VagaInfo != null)
             {
@@ -45,7 +47,17 @@ namespace SistemaEstacionamento
 
         private void Vaga_Click(object sender, EventArgs e)
         {
-            SharedData.ActiveVaga = int.Parse(NumeroVaga);
+            if (VagaInfo != null)
+            {
+                SharedData.ActiveVaga = VagaInfo;
+            }
+            else
+            {
+                SharedData.ActiveVaga = new Transacao
+                {
+                    NumVaga = NumeroVaga,
+                };
+            }
             ShowCadastro();
         }
     }
